@@ -46,7 +46,18 @@ body{
             height: 359px;
             overflow: hidden;
             z-index: -1;
-        }        
+        } 
+        
+.stage3 {
+            position: absolute;
+            top: 20;
+            left: 0;
+            width: 100%;
+            min-width: 900px;
+            height: 359px;
+            overflow: hidden;
+            z-index: -1;
+        }          
 </style>
 
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -60,6 +71,7 @@ $(document).ready(function() {
 
 $('#line').pan({fps: 30, speed: 2, dir: 'left', depth: 30});
 $('#line2').pan({fps: 35, speed: 3, dir: 'left', depth: 40});
+$('#line3').pan({fps: 45, speed: 4, dir: 'left', depth: 20});
 
 });
 
@@ -279,6 +291,7 @@ var pathObj = {
  <body> 
  <div id="line" class="stage"></div>
  <div id="line2" class="stage2"></div>
+ <div id="line3" class="stage3"></div>
  	<div id="cuz"></div>
 </body>
 </html>
