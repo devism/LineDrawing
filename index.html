@@ -10,8 +10,11 @@
     margin:0 auto;
     border:8px solid #0F8EBF;
     border-radius: 5px;
-    background-color: #F0F3FC;
+    background-color: #F0F3EF;
     z-index: 1;
+    -webkit-box-shadow: 22px 23px 91px -13px rgba(0,0,0,1);
+-moz-box-shadow: 22px 23px 91px -13px rgba(0,0,0,1);
+box-shadow: 22px 23px 91px -13px rgba(0,0,0,1);
 }
 
 body{
@@ -27,8 +30,12 @@ body{
         }
 
 #line3 {
-        background: transparent url(line.png) 0 258px repeat-x;
+        background: transparent url(line2.png) 0 258px repeat-x;
         }
+
+#line4 {
+        background: transparent url(line3.png) 0 258px repeat-x;
+        }        
         
 .stage {
             position: absolute;
@@ -61,7 +68,18 @@ body{
             height: 359px;
             overflow: hidden;
             z-index: -1;
-        }          
+        }  
+
+.stage4 {
+            position: absolute;
+            top: -90;
+            left: 0;
+            width: 100%;
+            min-width: 900px;
+            height: 359px;
+            overflow: hidden;
+            z-index: -1;
+        }                 
 </style>
 
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -76,6 +94,7 @@ $(document).ready(function() {
 $('#line').pan({fps: 30, speed: 2, dir: 'left', depth: 30});
 $('#line2').pan({fps: 35, speed: 3, dir: 'left', depth: 40});
 $('#line3').pan({fps: 40, speed: 4, dir: 'left', depth: 20});
+$('#line4').pan({fps: 40, speed: 1, dir: 'right', depth: 10});
 
 });
 
@@ -296,6 +315,7 @@ var pathObj = {
  <div id="line" class="stage"></div>
  <div id="line2" class="stage2"></div>
  <div id="line3" class="stage3"></div>
+ <div id="line4" class="stage4"></div>
  	<div id="cuz"></div>
 </body>
 </html>
