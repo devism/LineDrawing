@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+div{
+	width:20px;
+	height:20px;
+	float:left;
+	border: 1px solid black;
+	margin:1px;
+	background-color: white;
+}
+</style>
+</head>
+<body>
+<script>
+var getDivs = document.getElementsByTagName('div');
+
+function makeDiv() {
+
+    for(var i = 0; i < 20; i++){
+          var divs = document.createElement('div');
+          
+          document.body.appendChild(divs);
+    }
+}
+
+
+function loops(i){
+
+	for(var i = 0; i < 20; i++){
+         
+       getDivs[i%3].style.backgroundColor="red"; 
+        
+    }
+ } 
+
+   
+
+makeDiv();
+
+setInterval(function(){loops();}, 500);
+
+
+</script>
+</body>
+</html>

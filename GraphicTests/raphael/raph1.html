@@ -1,0 +1,38 @@
+<html>
+<head>
+ 
+</head>
+ <body>
+ 
+<div id="canvas_container"></div>
+
+
+<script src="raphael-min.js"></script>
+<script>
+
+window.onload = function(){
+	var paper = new Raphael(document.getElementById('canvas_container'), 500, 500);
+    var rectangle = paper.rect(100,100, 250, 80);
+
+    
+    rectangle.attr({
+            
+            gradient: '90-#526c7a-#64a0c1',
+            stroke: '#3b4449',
+            'stroke-width': 10,
+            'stroke-linejoin': 'round',
+            rotation: -90
+    });
+
+    /// cone circles
+    rectangle.animate({rotation:360}, 2000, 'bounce');
+
+  
+ 
+
+}//onload
+
+</script>
+  
+  </body>
+</html

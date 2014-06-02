@@ -1,6 +1,11 @@
 <html>
  <head>
+<!-- 
+=================================
+Name:Ismael Carbajal
+Date:May 15 2014
 
+-->
 <style>
 
 #cuz{
@@ -72,7 +77,7 @@ body{
 
 .stage4 {
             position: absolute;
-            top: -90;
+            top: -60;
             left: 0;
             width: 100%;
             min-width: 900px;
@@ -89,19 +94,40 @@ body{
 <script src="spritely/jquery.spritely.js" type="text/javascript"></script>        
 
 <script>
+
+////try to repeat line
 $(document).ready(function() {
 
+var lineClones = $('#line4').pan({fps: 40, speed: 2, dir: 'right', depth: 10});
+var topProperty = $("stage4").css("top"); //get the top property
+
+topProperty = 0;
+
+for(var i = 0; i < 50; i++ ){
+      
+   
+  
+   //$('stage'+[i]).css('top', topProperty + i).appendTo("body");
+    
+    //$('stage4').css('top', topProperty+i);
+
+    // $(lineClones).pan({fps: 30, speed: 2, dir: 'left', depth: 30}).clone().appendTo("body");
+}
+
+console.log(lineClones);
+
+///////////// background lines ///////////////////////
 $('#line').pan({fps: 30, speed: 2, dir: 'left', depth: 30});
 $('#line2').pan({fps: 35, speed: 3, dir: 'left', depth: 40});
 $('#line3').pan({fps: 40, speed: 4, dir: 'left', depth: 20});
-$('#line4').pan({fps: 40, speed: 1, dir: 'right', depth: 10});
-
+//$('#line4').pan({fps: 40, speed: 2, dir: 'right', depth: 10}); //sine lines
+////////////////////////////////////////////////////////////////////////
 });
 
 </script>
 
 <script> 
-//main program
+//////////////main face program/////////////////////////////
  
 var pathObj = {
     "cuz": {
@@ -303,7 +329,7 @@ var pathObj = {
     "strokeColor": "#074C8F"
 }).lazylinepainter('paint'); 
  });
-
+///////////////////////////////////////////////// end main face
 </script>
 
  
